@@ -42,6 +42,8 @@ programa {
     escreva(moedas5, " moeda(s) de R$ 0.05\n")
     escreva(moedas1, " moeda(s) de R$ 0.01\n")
 
+
+
     //ordem crescente
     inteiro a, b, c
     leia(a, b, c)
@@ -78,6 +80,8 @@ programa {
     escreva(menor, "\n", meio, "\n", maior, "\n")
     escreva(a, "\n", b, "\n", c, "\n")
 
+
+
   //horario
   inteiro hi, mi, hf, mf, diferenca
     leia(hi, mi, hf, mf)
@@ -97,5 +101,75 @@ programa {
     inteiro horaResultado = diferenca / 60
     inteiro minutoResultado = diferenca % 60
     escreva("O JOGO DUROU ", horaResultado, " HORA(S) E ", minutoResultado ," MINUTO(S)")
+
+
+
+  //Salário com aumento
+         real salario, percentual, r1, r2
+
+		escreva("Escreva quanto vc recebe: ")
+		leia(salario)
+
+		se (salario >= 0 e salario <= 400)
+		{
+			percentual = 0.15
+			r1 = salario * percentual
+			r2 = salario + r1
+			escreva("\nSeu salário é: " + r2)
+			escreva("\nDinheiro ganho: " + r1)
+			escreva("\nSeu percentual é: " + percentual * 100 + "%")
+		} 
+		senao se (salario >= 400.01 e salario <= 800)
+		{
+			percentual = 0.12
+			r1 = salario * percentual
+			r2 = salario + r1
+			escreva("\nSeu salário é: " + r2)
+			escreva("\nDinheiro ganho: " + r1)
+			escreva("\nSeu percentual é: " + percentual * 100 + "%")
+		}
+		senao se (salario >= 800.01 e salario <= 1200)
+		{
+			percentual = 0.10
+			r1 = salario * percentual
+			r2 = salario + r1
+			escreva("\nSeu salário é: " + r2)
+			escreva("\nDinheiro ganho: " + r1)
+			escreva("\nSeu percentual é: " + percentual * 100 + "%")
+		}
+		senao se (salario >= 1200.01 e salario <= 2000)
+		{
+			percentual = 0.07
+			r1 = salario * percentual
+			r2 = salario + r1
+			escreva("\nSeu salário é: " + r2)
+			escreva("\nDinheiro ganho: " + r1)
+			escreva("\nSeu percentual é: " + percentual * 100 + "%")
+		}
+		senao se (salario >= 2000)
+		{
+			percentual = 0.04
+			r1 = salario * percentual
+			r2 = salario + r1
+			escreva("\nSeu salário é: " + r2)
+			escreva("\nDinheiro ganho: " + r1)
+			escreva("\nSeu percentual é: " + percentual * 100 + "%")
+		}
+
+
+
+
+    //Idade em anos, meses e dias
+    inteiro idade_em_dias, d, m, a, r1, r2, resto
+
+		escreva("Digite sua idade em dias: ")
+		leia(idade_em_dias)
+
+		a = idade_em_dias / 365
+		m = idade_em_dias % 365
+		m = m / 30 
+		d = idade_em_dias % 365
+		d = d % 30
+		escreva(a + " ano(s)\n" + m + " mês(es)\n" + d + " dia(s)") 
   }
 }
